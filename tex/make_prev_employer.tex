@@ -1,0 +1,30 @@
+\makeatletter
+\newcommand\prevoccupation[1]{\renewcommand\@prevoccupation{#1}}
+\newcommand\@prevoccupation{\@latex@error{No \noexpand\prevoccupation given}\@ehc}
+
+\newcommand\prevemployer[1]{\renewcommand\@prevemployer{#1}}
+\newcommand\@prevemployer{\@latex@error{No \noexpand\prevemployer given}\@ehc}
+
+\newcommand\prevlocation[1]{\renewcommand\@prevlocation{#1}}
+\newcommand\@prevlocation{\@latex@error{No \noexpand\prevlocation given}\@ehc}
+
+\newcommand\prevtime[1]{\renewcommand\@prevtime{#1}}
+\newcommand\@prevtime{\@latex@error{No \noexpand\prevtime given}\@ehc}
+
+\newcommand\prevduties[1]{\renewcommand\@prevduties{#1}}
+\newcommand\@prevduties{\@latex@error{No \noexpand\prevduties given}\@ehc}
+
+\newcommand\makeprevemployment{
+\begin{flushleft}
+  \normalsize{\textbf{\@prevoccupation}} \\
+  \small{\@prevemployer}\\
+  \footnotesize{
+    \begin{tabularx}{0.8\LeftColumnWidth}{r l r l}
+      \includegraphics[height=10pt]{images/clock-icon.png} & \hspace*{-0.4cm} \@prevtime &
+      \quad \includegraphics[height=10pt]{images/location-icon.png} & \hspace*{-0.4cm} \@prevlocation
+    \end{tabularx}\\
+  }
+  \small{ \@prevduties }
+\end{flushleft}
+}
+\makeatother

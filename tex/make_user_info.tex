@@ -1,0 +1,40 @@
+\makeatletter
+\newcommand\username[1]{\renewcommand\@username{#1}}
+\newcommand\@username{\@latex@error{No \noexpand\username given}\@ehc}
+
+\newcommand\useroccupation[1]{\renewcommand\@useroccupation{#1}}
+\newcommand\@useroccupation{\@latex@error{No \noexpand\useroccupation given}\@ehc}
+
+\newcommand\userphone[1]{\renewcommand\@userphone{#1}}
+\newcommand\@userphone{\@latex@error{No \noexpand\userphone given}\@ehc}
+
+\newcommand\useremail[1]{\renewcommand\@useremail{#1}}
+\newcommand\@useremail{\@latex@error{No \noexpand\useremail given}\@ehc}
+
+\newcommand\usergithub[1]{\renewcommand\@usergithub{#1}}
+\newcommand\@usergithub{\@latex@error{No \noexpand\usergithub given}\@ehc}
+
+\newcommand\userlinkedin[1]{\renewcommand\@userlinkedin{#1}}
+\newcommand\@userlinkedin{\@latex@error{No \noexpand\userlinkedin given}\@ehc}
+
+\newcommand\userscholar[1]{\renewcommand\@userscholar{#1}}
+\newcommand\@userscholar{\@latex@error{No \noexpand\userscholar given}\@ehc}
+
+\newcommand\makeuserinfo{
+\begin{center}
+  \textbf{\LARGE{\@username}} \\
+  \normalsize{\@useroccupation}\\
+  \MySep
+  \small{
+    \def\arraystretch{1.5}
+    \begin{tabularx}{0.6\LeftColumnWidth}{m{0.05\LeftColumnWidth} m{0.5\LeftColumnWidth}}
+      \includegraphics[height=14pt]{images/solid-phone-icon.png} & \@userphone \\
+      \includegraphics[height=12pt]{images/envelope-icon.png}    & {\href{mailto:\@useremail}{\@useremail}}\\
+      \includegraphics[height=12pt]{images/scholar-icon.png}     & {\url{\@userscholar}}\\
+      \includegraphics[height=12pt]{images/github-icon.png}      & {\url{\@usergithub}}\\
+      \includegraphics[height=10pt]{images/linkedin-icon.png}    &  {\url{\@userlinkedin}}
+    \end{tabularx}
+  }
+\end{center}
+}
+\makeatother

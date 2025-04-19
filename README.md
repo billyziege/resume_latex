@@ -41,8 +41,9 @@ read [here](LICENSE).  I find the License a little scary myself, but I don't rea
 Feel free to copy, modify, and do what you like with the little that is here.
 
 In fact, this is what I did for the four icon pngs in [`tex/images`](tex/images); I downloaded similar icons
-from the [free-icons git repository](https://github.com/free-icons/free-icons/tree/master).  I took four
-of their svg icons, rotated the phone, changed the color, and saved them as pngs, which are easier for `pdflatex`.
+from the [free-icons git repository](https://github.com/free-icons/free-icons/tree/master).  I took 7
+of their svg icons, rotated the phone, changed the color on 5, and saved them as pngs, which are easier for `pdflatex`
+to handle.
 Note that they also have the
 Creative Commons license although I would tell you to look at you they talk about their license as I do not represent
-them, but I do want to give a shout out to that pretty insanely large repository for help in this project. 
+them, but I nevertheless want to give a shout out to that pretty insanely large repository for help in this project. 

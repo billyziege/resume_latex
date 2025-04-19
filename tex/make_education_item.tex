@@ -1,0 +1,18 @@
+\makeatletter
+\newcommand\school[1]{\renewcommand\@school{#1}}
+\newcommand\@school{\@latex@error{No \noexpand\school given}\@ehc}
+
+\newcommand\degree[1]{\renewcommand\@degree{#1}}
+\newcommand\@degree{\@latex@error{No \noexpand\degree given}\@ehc}
+
+\newcommand\yearreceived[1]{\renewcommand\@yearreceived{#1}}
+\newcommand\@yearreceived{\@latex@error{No \noexpand\yearreceived given}\@ehc}
+
+\newcommand\field[1]{\renewcommand\@field{#1}}
+\newcommand\@field{\@latex@error{No \noexpand\field given}\@ehc}
+
+\newcommand\makeeducationitem{
+  \item \normalsize{\textbf{\@degree} \@field} \\
+  \hspace*{1cm}{\small{ \@school (\@yearreceived)}}
+}
+\makeatother

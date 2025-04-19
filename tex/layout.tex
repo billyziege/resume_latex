@@ -1,0 +1,96 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Zerbe Resume                                                              %
+% Page layout file                                                          %
+% Version 0.0 (4/2025)                                                      %
+%                                                                           %
+% Original author:                                                          %
+% Frits Wenneker (http://www.howtotex.com) with extensive                   %
+% personal modifications by                                                 %
+% Brandon Zerbe (brandon.s.zerbe@gmail.com)                                 %
+%                                                                           %
+% License:                                                                  %
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)       %
+%                                                                           %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{flowfram} % Required for the multi-column layout
+%%%%%%%%% New Lengths (for document layout) %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Set parameters to be used to set structure.
+\newlength{\OuterMarginPad}
+\setlength{\OuterMarginPad}{1.2 cm}
+
+\newlength{\InnerMarginPad}
+\setlength{\InnerMarginPad}{0.6 cm}
+
+% Break page into 3 unequal boxes with text Boxes
+\newlength{\LeftColumnWidth}
+\setlength{\LeftColumnWidth}{0.4\textwidth}
+
+\newlength{\RightColumnWidth}
+\setlength{\RightColumnWidth}{\textwidth}
+\addtolength{\RightColumnWidth}{-\LeftColumnWidth}
+
+\newlength{\UpperRowHeight}
+\setlength{\UpperRowHeight}{0.3\textheight}
+
+\newlength{\LowerRowHeight}
+\setlength{\LowerRowHeight}{\textheight}
+\addtolength{\LowerRowHeight}{-\UpperRowHeight}
+
+% now form the text boxes.
+\newlength{\UpperTextHeight}
+\setlength{\UpperTextHeight}{\UpperRowHeight}
+\addtolength{\UpperTextHeight}{-\OuterMarginPad}
+\addtolength{\UpperTextHeight}{-\InnerMarginPad}
+
+\newlength{\LowerTextHeight}
+\setlength{\LowerTextHeight}{\LowerRowHeight}
+\addtolength{\LowerTextHeight}{-\OuterMarginPad}
+\addtolength{\LowerTextHeight}{-\InnerMarginPad}
+
+\newlength{\LeftTextWidth}
+\setlength{\LeftTextWidth}{\LeftColumnWidth}
+\addtolength{\LeftTextWidth}{-\OuterMarginPad}
+\addtolength{\LeftTextWidth}{-\InnerMarginPad}
+
+\newlength{\RightTextWidth}
+\setlength{\RightTextWidth}{\RightColumnWidth}
+\addtolength{\RightTextWidth}{-\OuterMarginPad}
+\addtolength{\RightTextWidth}{-\InnerMarginPad}
+
+\newlength{\RightTextHeight}
+\setlength{\RightTextHeight}{\textheight}
+\addtolength{\RightTextHeight}{-3\OuterMarginPad}
+
+% This defines the start of the boxes not near the edge of the "paper"
+\newlength{\UpperTextStart}
+\setlength{\UpperTextStart}{\LowerRowHeight}
+\addtolength{\UpperTextStart}{\InnerMarginPad}
+
+\newlength{\RightTextStart}
+\setlength{\RightTextStart}{\LeftColumnWidth}
+\addtolength{\RightTextStart}{\InnerMarginPad}
+
+%%%%%%%  Frames  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Define the top-left-sidebar name frame
+\newflowframe{\LeftColumnWidth}{\UpperRowHeight}{0pt}{\LowerRowHeight}[top-left]
+\setflowframe{1}{backcolor=[rgb]{0.25,0,0.5}}
+
+% Define the top-left-sidebar name text frame
+\newflowframe{\LeftTextWidth}{\UpperTextHeight}{\OuterMarginPad}{\UpperTextStart}[top-left-text]
+\setflowframe{2}{textcolor=white}
+\setflowframe{2}{backcolor=[rgb]{0.25,0,0.5}}
+
+% Define the bottom-left-sidebar frame
+\newflowframe{\LeftColumnWidth}{\LowerRowHeight}{0pt}{0pt}[bot-left]
+\setflowframe{3}{backcolor=[rgb]{0.4,0.3,0.8}}
+
+% Define the bottom-left-sidebar text frame
+\newflowframe{\LeftTextWidth}{\LowerTextHeight}{\OuterMarginPad}{\OuterMarginPad}[bot-left-text]
+\setflowframe{4}{textcolor=white}
+\setflowframe{4}{backcolor=[rgb]{0.4,0.3,0.8}}
+
+% Define the right-sidebar text frame
+\newflowframe{\RightTextWidth}{\RightTextHeight}{\RightTextStart}{\OuterMarginPad}[right-text]

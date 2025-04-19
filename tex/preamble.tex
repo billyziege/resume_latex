@@ -1,0 +1,48 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Zerbe Resume                                                              %
+% Page layout file                                                          %
+% Version 0.0 (4/2025)                                                      %
+%                                                                           %
+% Original author:                                                          %
+% Frits Wenneker (http://www.howtotex.com) with extensive                   %
+% personal modifications by                                                 %
+% Brandon Zerbe (brandon.s.zerbe@gmail.com)                                 %
+%                                                                           %
+% License:                                                                  %
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)       %
+%                                                                           %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%  Packages  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[top=0cm,left=0cm,right=0cm,bottom=0cm]{geometry} % Control margins
+\usepackage{graphicx} % Required for includegraphic
+\usepackage{tabularx} % Required for tabularx environment
+\usepackage[usenames,dvipsnames]{xcolor} % Required for coloring links
+\usepackage[colorlinks]{hyperref} % URLs and email
+\usepackage{ragged2e} % For justifying
+\hypersetup{urlcolor=cyan}
+\usepackage{enumitem} % Required for modifying lists
+\setlist{noitemsep,nolistsep} % Remove spacing within and around lists
+
+\input{layout.tex} % This has the page layout within it.
+
+%%%%%%%  Settings  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Define lengths to use for formatting
+\setlength{\parindent}{0pt} % Stop paragraph indentation
+\setlength{\columnsep}{\baselineskip} % Set the spacing between columns
+
+\pagestyle{empty} % Disable all page numbering
+
+
+%%%%%%%	New Commands %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Some spacing commands
+\newcommand{\MySep}{\vspace{1em}}
+\newcommand{\MySmallSep}{\vspace{0.5em}}
+
+\include{make_user_info.tex}
+\include{make_prev_employer.tex}
+\include{make_education_item.tex}
+
+\renewcommand\tabularxcolumn[1]{m{#1}}
