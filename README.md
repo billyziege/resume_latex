@@ -1,10 +1,10 @@
 # Table of Contents
-1. [What is this repo?](#what-is-this-repo?)
-1. [Why do you have this repo?](#why-do-you-have-this-repo?)
-1. [How do I build your resume?](#how-do-i-build-your-resume?)
-1. [Can I steal this?](#can-i-steal-this?)
+1. [What is this repo?](#what-is-this-repo)
+1. [Why do you have this repo?](#why-do-you-have-this-repo)
+1. [How do I build your resume?](#how-do-i-build-your-resume)
+1. [Can I steal this?](#can-i-steal-this)
 
-# What is this repo?
+# What is this repo
 
 This repo houses my tex files and contents for building my resume using `pdflatex`.
 For those uninitiated, L<sup>A</sup>T<sub>E</sub>X is an old school type-setting language
@@ -17,7 +17,7 @@ In the repo, I created a page layout for my resume and some functions for creati
 the content I have in the upper right side.
 It's not a very big project, but it's also a one-page resume so it doesn't need to be.
 
-# Why do you have this repo?
+# Why do you have this repo
 
 What you need to know about me is that I don't really have much on github.
 A lot of my current work is software engineering where I create internal documents.  I do this at work,
@@ -26,7 +26,7 @@ When I am at home, I am mostly spending time with my family.  When I do have fre
 do ``fun'' work, it's mathematics.  So when I apply to jobs, I need something to showcase some
 of what I do.  This is why I have this repo publicly available.
 
-# How do I build your resume?
+# How do I build your resume
 
 This depends on your OS.  I use fedora.  On fedora, I've installed pdflatex.
 Some people use Overleaf for shared content, but I prefer to just use `git` to keep
@@ -34,7 +34,7 @@ tex files in a repository (like this one) and `pdflatex resume.txt` (in the tex 
 to build because it is free and relatively easy.  If you search for "How do I install LaTeX?",
 you'll probably find information on how to set it up for yourself.
 
-# Can I steal this?
+# Can I steal this
 
 Sure.  It's not really stealing.  The License I've attached is the Creative Commons license, which you can
 read [here](LICENSE).  I find the License a little scary myself, but I don't really care what you do with this content. 
